@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE2647541CA6833C0014B579 /* yunzi.json in Resources */ = {isa = PBXBuildFile; fileRef = FE2647531CA6833C0014B579 /* yunzi.json */; };
+		FE4B91981CA24105001297E6 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4B917F1CA24105001297E6 /* DDAbstractDatabaseLogger.m */; };
+		FE4B91991CA24105001297E6 /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4B91811CA24105001297E6 /* DDASLLogCapture.m */; };
+		FE4B919A1CA24105001297E6 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4B91831CA24105001297E6 /* DDASLLogger.m */; };
+		FE4B919B1CA24105001297E6 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4B91861CA24105001297E6 /* DDFileLogger.m */; };
+		FE4B919C1CA24105001297E6 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4B918A1CA24105001297E6 /* DDLog.m */; };
+		FE4B919D1CA24105001297E6 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4B918D1CA24105001297E6 /* DDTTYLogger.m */; };
+		FE4B919E1CA24105001297E6 /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4B91901CA24105001297E6 /* DDContextFilterLogFormatter.m */; };
+		FE4B919F1CA24105001297E6 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4B91921CA24105001297E6 /* DDDispatchQueueLogFormatter.m */; };
+		FE4B91A01CA24105001297E6 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4B91941CA24105001297E6 /* DDMultiFormatter.m */; };
+		FE4B91A11CA24105001297E6 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE4B91951CA24105001297E6 /* LICENSE.txt */; };
+		FE4B91A21CA24105001297E6 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FE4B91961CA24105001297E6 /* README.md */; };
+		FE4B91AD1CA2484E001297E6 /* HHLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4B91AB1CA2484E001297E6 /* HHLogFormatter.m */; };
+		FE4B932C1CA2DFBC001297E6 /* LocalizationMap-master in Resources */ = {isa = PBXBuildFile; fileRef = FE4B932B1CA2DFBC001297E6 /* LocalizationMap-master */; };
+		FE4B932F1CA672E2001297E6 /* HighpassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4B932E1CA672E2001297E6 /* HighpassFilter.m */; };
+		FE5307731CA78B940015816F /* C3Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5307721CA78B940015816F /* C3Beacon.m */; };
 		FEE48AF21C9FC66600AC68DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE48AF11C9FC66600AC68DD /* main.m */; };
 		FEE48AF51C9FC66600AC68DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE48AF41C9FC66600AC68DD /* AppDelegate.m */; };
 		FEE48AF81C9FC66600AC68DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE48AF71C9FC66600AC68DD /* ViewController.m */; };
@@ -16,6 +32,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE2647531CA6833C0014B579 /* yunzi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = yunzi.json; sourceTree = "<group>"; };
+		FE4B917B1CA24105001297E6 /* CocoaLumberjack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaLumberjack.h; sourceTree = "<group>"; };
+		FE4B917C1CA24105001297E6 /* CocoaLumberjack.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = CocoaLumberjack.modulemap; sourceTree = "<group>"; };
+		FE4B917E1CA24105001297E6 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		FE4B917F1CA24105001297E6 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		FE4B91801CA24105001297E6 /* DDASLLogCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogCapture.h; sourceTree = "<group>"; };
+		FE4B91811CA24105001297E6 /* DDASLLogCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogCapture.m; sourceTree = "<group>"; };
+		FE4B91821CA24105001297E6 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		FE4B91831CA24105001297E6 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		FE4B91841CA24105001297E6 /* DDAssertMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAssertMacros.h; sourceTree = "<group>"; };
+		FE4B91851CA24105001297E6 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		FE4B91861CA24105001297E6 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		FE4B91871CA24105001297E6 /* DDLegacyMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLegacyMacros.h; sourceTree = "<group>"; };
+		FE4B91881CA24105001297E6 /* DDLog+LOGV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDLog+LOGV.h"; sourceTree = "<group>"; };
+		FE4B91891CA24105001297E6 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		FE4B918A1CA24105001297E6 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		FE4B918B1CA24105001297E6 /* DDLogMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLogMacros.h; sourceTree = "<group>"; };
+		FE4B918C1CA24105001297E6 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		FE4B918D1CA24105001297E6 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		FE4B918F1CA24105001297E6 /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		FE4B91901CA24105001297E6 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		FE4B91911CA24105001297E6 /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		FE4B91921CA24105001297E6 /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		FE4B91931CA24105001297E6 /* DDMultiFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMultiFormatter.h; sourceTree = "<group>"; };
+		FE4B91941CA24105001297E6 /* DDMultiFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMultiFormatter.m; sourceTree = "<group>"; };
+		FE4B91951CA24105001297E6 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		FE4B91961CA24105001297E6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FE4B91A31CA241BE001297E6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FE4B91AB1CA2484E001297E6 /* HHLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHLogFormatter.m; sourceTree = "<group>"; };
+		FE4B91AC1CA2484E001297E6 /* HHLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHLogFormatter.h; sourceTree = "<group>"; };
+		FE4B932B1CA2DFBC001297E6 /* LocalizationMap-master */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "LocalizationMap-master"; sourceTree = "<group>"; };
+		FE4B932D1CA672E2001297E6 /* HighpassFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighpassFilter.h; sourceTree = "<group>"; };
+		FE4B932E1CA672E2001297E6 /* HighpassFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighpassFilter.m; sourceTree = "<group>"; };
+		FE5307711CA78B940015816F /* C3Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C3Beacon.h; sourceTree = "<group>"; };
+		FE5307721CA78B940015816F /* C3Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C3Beacon.m; sourceTree = "<group>"; };
 		FEE48AED1C9FC66600AC68DD /* LocalizationEKF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalizationEKF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE48AF11C9FC66600AC68DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FEE48AF31C9FC66600AC68DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +90,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE4B91791CA24105001297E6 /* CocoaLumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				FE4B917A1CA24105001297E6 /* Classes */,
+				FE4B91951CA24105001297E6 /* LICENSE.txt */,
+				FE4B91961CA24105001297E6 /* README.md */,
+			);
+			path = CocoaLumberjack;
+			sourceTree = "<group>";
+		};
+		FE4B917A1CA24105001297E6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FE4B917B1CA24105001297E6 /* CocoaLumberjack.h */,
+				FE4B917C1CA24105001297E6 /* CocoaLumberjack.modulemap */,
+				FE4B917E1CA24105001297E6 /* DDAbstractDatabaseLogger.h */,
+				FE4B917F1CA24105001297E6 /* DDAbstractDatabaseLogger.m */,
+				FE4B91801CA24105001297E6 /* DDASLLogCapture.h */,
+				FE4B91811CA24105001297E6 /* DDASLLogCapture.m */,
+				FE4B91821CA24105001297E6 /* DDASLLogger.h */,
+				FE4B91831CA24105001297E6 /* DDASLLogger.m */,
+				FE4B91841CA24105001297E6 /* DDAssertMacros.h */,
+				FE4B91851CA24105001297E6 /* DDFileLogger.h */,
+				FE4B91861CA24105001297E6 /* DDFileLogger.m */,
+				FE4B91871CA24105001297E6 /* DDLegacyMacros.h */,
+				FE4B91881CA24105001297E6 /* DDLog+LOGV.h */,
+				FE4B91891CA24105001297E6 /* DDLog.h */,
+				FE4B918A1CA24105001297E6 /* DDLog.m */,
+				FE4B918B1CA24105001297E6 /* DDLogMacros.h */,
+				FE4B918C1CA24105001297E6 /* DDTTYLogger.h */,
+				FE4B918D1CA24105001297E6 /* DDTTYLogger.m */,
+				FE4B918E1CA24105001297E6 /* Extensions */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FE4B918E1CA24105001297E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FE4B918F1CA24105001297E6 /* DDContextFilterLogFormatter.h */,
+				FE4B91901CA24105001297E6 /* DDContextFilterLogFormatter.m */,
+				FE4B91911CA24105001297E6 /* DDDispatchQueueLogFormatter.h */,
+				FE4B91921CA24105001297E6 /* DDDispatchQueueLogFormatter.m */,
+				FE4B91931CA24105001297E6 /* DDMultiFormatter.h */,
+				FE4B91941CA24105001297E6 /* DDMultiFormatter.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FE4B91A41CA24246001297E6 /* HHLog */ = {
+			isa = PBXGroup;
+			children = (
+				FE4B91AB1CA2484E001297E6 /* HHLogFormatter.m */,
+				FE4B91AC1CA2484E001297E6 /* HHLogFormatter.h */,
+			);
+			name = HHLog;
+			sourceTree = "<group>";
+		};
 		FEE48AE41C9FC66600AC68DD = {
 			isa = PBXGroup;
 			children = (
@@ -58,15 +167,24 @@
 		FEE48AEF1C9FC66600AC68DD /* LocalizationEKF */ = {
 			isa = PBXGroup;
 			children = (
+				FE4B932B1CA2DFBC001297E6 /* LocalizationMap-master */,
+				FE4B91A41CA24246001297E6 /* HHLog */,
+				FE4B91791CA24105001297E6 /* CocoaLumberjack */,
 				FEE48AF31C9FC66600AC68DD /* AppDelegate.h */,
 				FEE48AF41C9FC66600AC68DD /* AppDelegate.m */,
 				FEE48AF61C9FC66600AC68DD /* ViewController.h */,
 				FEE48AF71C9FC66600AC68DD /* ViewController.m */,
+				FE4B932D1CA672E2001297E6 /* HighpassFilter.h */,
+				FE4B932E1CA672E2001297E6 /* HighpassFilter.m */,
+				FE5307711CA78B940015816F /* C3Beacon.h */,
+				FE5307721CA78B940015816F /* C3Beacon.m */,
 				FEE48AF91C9FC66600AC68DD /* Main.storyboard */,
 				FEE48AFC1C9FC66600AC68DD /* Assets.xcassets */,
 				FEE48AFE1C9FC66600AC68DD /* LaunchScreen.storyboard */,
+				FE2647531CA6833C0014B579 /* yunzi.json */,
 				FEE48B011C9FC66600AC68DD /* Info.plist */,
 				FEE48AF01C9FC66600AC68DD /* Supporting Files */,
+				FE4B91A31CA241BE001297E6 /* PrefixHeader.pch */,
 			);
 			path = LocalizationEKF;
 			sourceTree = "<group>";
@@ -136,9 +254,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4B91A11CA24105001297E6 /* LICENSE.txt in Resources */,
+				FE2647541CA6833C0014B579 /* yunzi.json in Resources */,
 				FEE48B001C9FC66600AC68DD /* LaunchScreen.storyboard in Resources */,
 				FEE48AFD1C9FC66600AC68DD /* Assets.xcassets in Resources */,
 				FEE48AFB1C9FC66600AC68DD /* Main.storyboard in Resources */,
+				FE4B932C1CA2DFBC001297E6 /* LocalizationMap-master in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,9 +270,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4B91991CA24105001297E6 /* DDASLLogCapture.m in Sources */,
+				FE4B932F1CA672E2001297E6 /* HighpassFilter.m in Sources */,
+				FE4B919D1CA24105001297E6 /* DDTTYLogger.m in Sources */,
+				FE4B919B1CA24105001297E6 /* DDFileLogger.m in Sources */,
+				FE4B91AD1CA2484E001297E6 /* HHLogFormatter.m in Sources */,
+				FE4B919E1CA24105001297E6 /* DDContextFilterLogFormatter.m in Sources */,
 				FEE48AF81C9FC66600AC68DD /* ViewController.m in Sources */,
 				FEE48AF51C9FC66600AC68DD /* AppDelegate.m in Sources */,
+				FE4B91A01CA24105001297E6 /* DDMultiFormatter.m in Sources */,
 				FEE48AF21C9FC66600AC68DD /* main.m in Sources */,
+				FE4B919C1CA24105001297E6 /* DDLog.m in Sources */,
+				FE5307731CA78B940015816F /* C3Beacon.m in Sources */,
+				FE4B91A21CA24105001297E6 /* README.md in Sources */,
+				FE4B919A1CA24105001297E6 /* DDASLLogger.m in Sources */,
+				FE4B91981CA24105001297E6 /* DDAbstractDatabaseLogger.m in Sources */,
+				FE4B919F1CA24105001297E6 /* DDDispatchQueueLogFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = LocalizationEKF/PrefixHeader.pch;
 				INFOPLIST_FILE = LocalizationEKF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gilbertz.LocalizationEKF;
@@ -274,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = LocalizationEKF/PrefixHeader.pch;
 				INFOPLIST_FILE = LocalizationEKF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gilbertz.LocalizationEKF;
@@ -300,6 +436,7 @@
 				FEE48B061C9FC66600AC68DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

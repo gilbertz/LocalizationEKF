@@ -1,0 +1,9 @@
+{
+  "type": "Feature",
+  "id": "OpenLayers.Feature.Vector_107",
+  "properties": {},
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-104.98, 39.76]
+  }
+}

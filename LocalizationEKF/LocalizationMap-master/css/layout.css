@@ -1,0 +1,228 @@
+/*@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700);*/
+/*这边考虑到加载速度就把它注释掉了*/
+
+body {
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 16px;
+}
+.navbar {
+  background-color: #1F6B75;
+  color: white;
+  border: 0;
+  border-radius: 0;
+}
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+  font-size: 160%;
+  padding: 8px 0;
+}
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: #aae1e9;
+}
+.navbar-brand img {
+  height: 35px;
+  vertical-align: middle;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+#title {
+  margin-top: 0;
+}
+
+#docs {
+  margin-top: 1em;
+}
+
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+ul.inline>li,
+ol.inline>li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+  background: url(../img/map-background.jpg) repeat; /*这边改了url路径，本地化了*/
+  margin-bottom: 10px;
+}
+
+.ol-attribution.ol-logo-only,
+.ol-attribution.ol-uncollapsible {
+  max-width: calc(100% - 3em);
+  height: 1.5em;
+}
+.ol-attribution ul {
+  font-size: 1rem;
+}
+.ol-control button, .ol-attribution, .ol-scale-line-inner {
+  font-family: 'Lucida Grande',Verdana,Geneva,Lucida,Arial,Helvetica,sans-serif;
+}
+.iframe-info iframe {
+  width: 100%;
+}
+
+pre[class*="language-"] {
+  margin-top: 20px;
+  background: #FFFFFF;
+}
+
+#source-controls {
+  position: absolute;
+  margin-top: 20px;
+  right: 40px;
+}
+
+#source-controls a {
+  margin-left: 15px;
+}
+
+#copy-button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#jsfiddle-button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+pre {
+  border: 1px solid #eee;
+  border-radius: 0;
+}
+
+#tags, #shortdesc, .hidden {
+  display: none;
+}
+#api-links ul {
+  display: inline;
+}
+
+/*下面是新增的全屏按钮样式*/
+.map:-moz-full-screen {
+  height: 100%;
+}
+.map:-webkit-full-screen {
+  height: 100%;
+}
+.map:-ms-fullscreen {
+  height: 100%;
+}
+.map:fullscreen {
+  height: 100%;
+}
+.ol-rotate {
+  top: 3em;
+}
+
+/*下面是地图的html，body规定*/
+html, body, .map {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+#info {
+  position: absolute;
+  font-size: 0.7em;
+  top: 50px;
+  right: 10px;
+  background-color: lightgrey;
+  padding: 4px;
+}
+.button {
+  /*position: absolute;*/
+  /*bottom: 40px;*/
+  /*left: 10px;*/
+}
+
+/*Popup弹出的样式*/
+.ol-popup {
+  position: absolute;
+  background-color: white;
+  -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 12px;
+  left: -50px;
+  min-width: 280px;
+}
+.ol-popup:after, .ol-popup:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.ol-popup:after {
+  border-top-color: white;
+  border-width: 10px;
+  left: 48px;
+  margin-left: -10px;
+}
+.ol-popup:before {
+  border-top-color: #cccccc;
+  border-width: 11px;
+  left: 48px;
+  margin-left: -11px;
+}
+.ol-popup-closer {
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+.ol-popup-closer:after {
+  content: "✖";
+}
+
+/*MousePosition样式——仿照arcgis的样式开始位置*/
+#mouse-position {
+  position: absolute;
+  bottom: 3.4em;
+  left: 1.6em;
+  border: 1em;
+  font-family: ​Verdana;
+  margin: 0 5px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #7a7875;
+  color:#fff;
+  height: 10px;
+  line-height:10px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#locatepng {
+  position: absolute;
+  bottom: 3em;
+  left: 0.6em;
+  background-color: #7a7875;
+  width: 16px;
+  height: 16px;
+}
+
+/*MousePosition样式——仿照arcgis的样式结束位置*/
+
+
+
+
+

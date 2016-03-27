@@ -1,0 +1,232 @@
+/*！！！！！！！！！！！！！！！！！！！！！！！特意加上的度娘搜索框的开始位置！！！！！！！！！！！！！！！！！！！！！！！！！！！！！*/
+#searchbox {
+  border-radius: 2px;
+  width: 425px;
+  position: relative;
+  z-index: 5;
+}
+
+.searchbox-content {
+  height: 38px;
+  width: 368px;
+  border-radius: 2px 0 0 2px;
+  background: #fff;
+}
+
+.searchbox-content:after {
+  font-size: 0;
+  zoom: 1;
+  content: " ";
+  clear: both;
+  display: block;
+  hieght: 0;
+  visibility: hidden;
+}
+
+#sole-searchbox-content #sole-input {
+  box-sizing: border-box;
+  border: 0;
+  padding: 9px 0;
+  border-left: 10px solid transparent;
+  border-right: 27px solid transparent;
+  line-height: 20px;
+  font-size: 16px;
+  height: 38px;
+  color: #333;
+  position: relative;
+  border-radius: 2px 0 0 2px;
+  box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+}
+
+.searchbox-content .searchbox-content-common {
+  box-sizing: border-box;
+  float: left;
+  width: 329px;
+  height: 38px;
+}
+
+.searchbox-content .input-clear {
+  cursor: pointer;
+  position: absolute;
+  width: 27px;
+  height: 38px;
+  top: 0;
+  background: url(../img/searchbox_f175577.png) no-repeat 0 -114px #fff;
+  display: none;
+  box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+}
+
+.searchbox-content .searchbox-content-button.route-button {
+  background: url(../img/searchbox_f175577.png) no-repeat 0 0;
+}
+
+.searchbox-content .searchbox-content-button {
+  box-sizing: border-box;
+  float: left;
+  height: 38px;
+  width: 39px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+}
+
+#searchbox #search-button {
+  pointer-events: auto;
+  background: url(../img/searchbox_f175577.png) no-repeat 0 -76px #3385ff;
+  width: 57px;
+  height: 38px;
+  float: left;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+}
+
+#searchbox #search-button:hover {
+  pointer-events: auto;
+  background: url(../img/searchbox_f175577.png) no-repeat 0 -76px #2e77e5;
+  width: 57px;
+  height: 38px;
+  float: left;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+}
+
+#searchbox {
+  position: absolute;
+  top:0.7em;
+  right:4em;
+}
+
+#search-button {
+  position: absolute;
+  top:0em;
+  right:0em;
+}
+
+/*！！！！！！！！！！！！！！！！！！！！！！！特意加上的度娘搜索框的结束位置！！！！！！！！！！！！！！！！！！！！！！！！！！！！！*/
+
+
+
+/*！！！！！！！！！！！rati评论实体的开始位置！！！！！！！！！！！！*/
+/* all sign style */
+.ratyli .rate{color: #ccc; font-size: 24px;}
+
+/* empty sign style */
+.ratyli .rate-empty{color: #666;}
+
+/* full sign style after rating*/
+.ratyli.rated .rate-full{color: #fe5845;}
+
+/* active signs (hover)*/
+.ratyli .rate-active{color: #a94039;}
+
+
+
+/* layout styles (only for demo)*/
+#demo5{
+  position:absolute;
+  bottom: 5.9em;
+  left:1em;
+  font-family: sans-serif;
+  background:#222;
+  border-radius:20px;
+  box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+
+  display: none; /*不用hide命令了，直接css把你一开始就设置为隐藏*/
+}
+#rati_h2{color:#fe5845; font-weight:300; font-size:16px; margin:15px 0;}
+
+.demo{
+  float:left;
+  width:18%;
+  padding:30px 1%;
+  text-align:center;
+  z-index: 99999;
+}
+
+
+/*！！！！！！！！！！！rati评论实体的开始位置！！！！！！！！！！！！*/
+
+
+
+/*！！！！！！！！！！绘制Pen的选项表单实体的开始位置！！！！！！！！！！！！*/
+
+#options-form{
+  position: absolute;
+  /*bottom: 15em;*/
+  bottom: 4em;
+  left:1em;
+  float:left;
+  width:18%;
+  padding:30px 1%;
+
+  background-color: lightgreen;
+  border-radius:20px;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,.15);
+
+  display: none; /*不用hide命令了，直接css把你一开始就设置为隐藏*/
+}
+
+/*！！！！！！！！！！绘制Pen的选项表单实体的结束位置！！！！！！！！！！！！*/
+
+
+
+/*测量Measure表单实体样式的开始位置*/
+
+.tooltip {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  color: white;
+  padding: 4px 8px;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+.tooltip-measure {
+  opacity: 1;
+  font-weight: bold;
+}
+.tooltip-static {
+  background-color: #ffcc33;
+  color: black;
+  border: 1px solid white;
+}
+.tooltip-measure:before,
+.tooltip-static:before {
+  border-top: 6px solid rgba(0, 0, 0, 0.5);
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  margin-left: -7px;
+  left: 50%;
+}
+.tooltip-static:before {
+  border-top-color: #ffcc33;
+}
+
+/*位置指定*/
+#measurechan {
+  position: absolute;
+  bottom: 16em;
+  left:1em;
+  float:left;
+  width:18%;
+  padding:30px 1%;
+
+  background-color: lightgreen;
+  border-radius:20px;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,.15);
+
+  display: none; /*不用hide命令了，直接css把你一开始就设置为隐藏*/
+}
+
+/*测量Measure表单实体样式的结束位置*/
+
+

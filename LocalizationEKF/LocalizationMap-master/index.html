@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+  <script src="js/jquery-2.2.0.js" type="text/javascript"></script>
+  <script src="js/ol.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="css/entity.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/ol.css" type="text/css">
+  <link rel="stylesheet" href="css/toastr.min.css" type="text/css">
+
+
+
+
+
+
+  <title>Cyber Mapviewer</title>
+</head>
+<body>
+
+<!--Map地图显示的div-->
+<div id="map" class="map"></div>
+
+<!--MousePosition的div-->
+<div id="mouse-position"></div>
+<img src="img/locate.png" id="locatepng"/>
+
+<!--currentPos的div-->
+
+
+<!--routeBtn的div-->
+
+
+<!--反馈-->
+<div id="demo5" class="demo">
+  <h2 id="rati_h2">How do you like this tour?</h2>
+  <span class="ratyli"></span>
+</div>
+
+<!--线条附着绘制Pen-->
+
+<form id="options-form" automplete="off">
+  <div class="radio">
+    <label>
+      <input type="radio" name="interaction" value="draw" id="draw" checked>
+      Draw &nbsp;
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="interaction" value="modify">
+      Modify &nbsp;
+    </label>
+  </div>
+  <div class="form-group">
+    <label>Draw type &nbsp;</label>
+    <select name="draw-type" id="draw-type">
+      <option value="Point">Point</option>
+      <option value="LineString">LineString</option>
+      <option value="Polygon">Polygon</option>
+    </select>
+  </div>
+</form>
+
+<!--测量的div-->
+
+<form class="form-inline" id="measurechan">
+  <label>Geometry type &nbsp;</label><br/>
+  <select id="type">
+    <option value="length">Length</option>
+    <option value="area">Area</option>
+  </select>
+  <label class="checkbox">
+    <input type="checkbox" id="geodesic">
+    use geodesic measures
+  </label>
+</form>
+
+
+<!--移动端的icon显示dock布局-->
+<div id="wrapper1">
+  <div id="dock-menu-wrapper" class="tb"
+       style="position: fixed; top: auto; bottom: 0px; right: auto; left: 0px; margin: 0px 0px 10px; padding: 0px 3%; width: 94%;">
+    <ul id="dock-menu-list" style="width: 100%; margin-bottom: -40px;">
+      <li class=""><a href="#settings"><span style="display: none;">Settings</span><img src="img/icons/Settings.png"></a></li>
+      <li class=""><a href="#Phone"><span style="display: none;">Phone</span><img src="img/icons/Phone.png"></a></li>
+      <li class=""><a href="#Mail"><span style="display: none;">Mail</span><img src="img/icons/Mail.png"></a></li>
+      <li class=""><a href="#Position" id="currentPos"><span style="display: none;">Position</span><img src="img/icons/position.png"></a></li>
+      <li class=""><a href="#Route" id="routeBtn"><span style="display: none;">Route</span><img src="img/icons/route.png"></a></li>
+      <li class=""><a href="#Pen" id="pen"><span style="display: none;">Pen</span><img src="img/icons/pen.png"></a></li>
+      <li class=""><a href="#Measure" id="measure"><span style="display: none;">Measure</span><img src="img/icons/measure.png"></a></li>
+      <li class=""><a href="#Feedback" id="feedback"><span style="display: none;">Feedback</span><img src="img/icons/feedback.png"></a></li>
+    </ul>
+    <div class="menu-perspective" style="width: 100%;">
+      <div class="menu-board metal-gradient" style="min-width: 512px;"></div>
+    </div>
+  </div>
+</div>
+
+
+<!--百度搜索框-->
+<div id="searchbox" class="clearfix">
+  <div id="searchbox-container">
+    <div id="sole-searchbox-content" class="searchbox-content">
+      <input id="sole-input" class="searchbox-content-common" type="text" name="word" autocomplete="off" maxlength="256"
+             placeholder="搜地点、查公交、找路线" value="">
+
+      <div class="searchbox-content-button right-button route-button loading-button" data-title="路线" data-tooltip="2">
+      </div>
+    </div>
+  </div>
+  <button id="search-button" data-title="搜索" data-tooltip="1"></button>
+</div>
+
+
+<!-- <script src="js/maphello.js" type="text/javascript"></script> -->
+<script src="js/map.js" type="text/javascript"></script>
+<script src="js/toastr.min.js" type="text/javascript"></script>
+<script src="js/jquery.ratyli.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="css/dockmenu.css">
+<script src="js/dockmenu.min.js"></script>
+
+
+</body>
+</html>
+
