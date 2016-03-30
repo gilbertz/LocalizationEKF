@@ -1,16 +1,24 @@
-//var url = 'http://localhost:8399/arcgis/rest/services/UMR/sjtu_east/MapServer';
-//var url = 'http://localhost:8399/arcgis/rest/services/HD-MAP-DATA/HD-MAP-DATA_Changshu_challenge_map/MapServer';
+  var positionCurrent = {
+    lat: null,
+    lng: null,
+    hng: null
+  };
+
+  var lasthng = 0;
+  var rotateangle=0;
+
 var url='http://192.168.1.150:8399/arcgis/rest/services/noblelit/MapServer';
 
+/**目标所在位置图片**/
+var image =  new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+        src: 'img/geolocation_marker_heading.png'
+    }));
 
-
-/*！！！！！！！！！！！！！！！！！！！！！！！！！！！！currentPos和全局路径规划结果显示开始位置！！！！！！！！！！！！！！！！！！！！！！！*/
-var image = new ol.style.Circle({
-  radius: 7,
+var beacon_image = new ol.style.Circle({
+  radius: 3,
   fill: new ol.style.Fill({
-    color: 'skyblue'
-  }),
-  stroke: new ol.style.Stroke({color: 'white', width: 2})
+    color: 'red'
+  })
 });
 
 var styles = {
@@ -44,6 +52,30 @@ var styleFunction = function(feature) {
   return styles[feature.getGeometry().getType()];
 };
 
+var beacon_array = [];
+var beacon_poi_array = [];
+$.getJSON("yunzi.json",function(data){
+          var beacondata = eval(data);
+          beaconNo = beacondata.length;
+          
+          for(var i=0;i<beaconNo;i++){
+                    beacon_poi_array[0] = beacondata[i].lon;
+                    beacon_poi_array[1] = beacondata[i].lat;
+                    beacon_array[i]= ol.proj.fromLonLat(beacon_poi_array);
+              
+          }
+          
+          });
+
+var beaconpoint = new ol.Feature({
+                               geometry: new ol.geom.MultiPoint(beacon_array)
+                               });
+
+var beaconpoint_style = new ol.style.Style({
+                                         image: beacon_image
+                                         });
+
+beaconpoint.setStyle(beaconpoint_style);
 
 var current_poi_array = [];
 current_poi_array[0] = 121.4366617310828;
@@ -74,6 +106,9 @@ var vectorSource = new ol.source.Vector({
 /*!!!这边有必要把当前位置的显示和路径规划的结果分离开来！！！*/
 vectorSource.addFeatures([current_poi_marker]);
 
+vectorSource.addFeatures([beaconpoint]);
+
+
 var vectorLayer = new ol.layer.Vector({
   source: vectorSource,
   style: styleFunction,
@@ -98,17 +133,17 @@ var map =  new ol.Map(
         }
       ),
       //vectorLayer, /*这边添加了显示当前位置和路径的矢量图层*/
-      new ol.layer.Tile(
-        {
-        extent: [-20037508.3427892,-20037508.3427892,20037508.3427892,20037508.3427892],
-          //preload: Infinity,
-          source: new ol.source.TileArcGISRest(
-          {
-          url: url
-          }
-        )
-      }
-      ),
+//      new ol.layer.Tile(
+//        {
+//        extent: [-20037508.3427892,-20037508.3427892,20037508.3427892,20037508.3427892],
+//          //preload: Infinity,
+//          source: new ol.source.TileArcGISRest(
+//          {
+//          url: url
+//          }
+//        )
+//      }
+//      ),
       vectorLayer,  /*这个是当前位置显示和全局路径规划的业务图层*/
     ],
     //北纬，东经是我们一般说的，但是这边程序一般是lonlat即经度在前120在前
@@ -139,14 +174,75 @@ var map =  new ol.Map(
 map.addControl(new ol.control.ScaleLine());
 /*！！！！！！！！！！！！！！！！！！！！！！！！！！！！Create the map的结束位置！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！*/
 
-  function show(jsondata){
+function draw(){
+      (beaconpoint.getGeometry()).setCoordinates(beacon_array);
+      beaconpoint.setStyle(beaconpoint_style);
+      map.render();
+}
+
+
+function show(jsondata){
     console.log("数据为："+JSON.stringify(jsondata));
     current_poi_array[0] = jsondata.lon;
     current_poi_array[1] = jsondata.lat;
     current_poi = ol.proj.fromLonLat(current_poi_array);
     (current_poi_marker.getGeometry()).setCoordinates(current_poi);
-    current_poi_marker.setStyle(current_poi_marker_style);   /*!!!这里是重新显示marker！！！*/
-        
-  // tell OL3 to continue the postcompose animation
-  map.render();
+    current_poi_marker.setStyle(current_poi_marker_style);
+    // image.setRotation(jsondata.heading);
+    map.render();
+    draw();
 };
+
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener("deviceorientation", onHeadingChange);
+  }
+
+  function getBrowserOrientation() {
+    var orientation;
+    if (screen.orientation && screen.orientation.type) {
+      orientation = screen.orientation.type;
+    } else {
+      orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
+    }
+    return orientation;
+  }
+
+  function onHeadingChange(event) {
+    var heading = event.alpha;
+
+    if (typeof event.webkitCompassHeading !== "undefined") {
+      heading = event.webkitCompassHeading; 
+    };
+
+    positionCurrent.hng = heading;
+
+      if (positionCurrent.hng <= 15 || positionCurrent.hng > 345) {
+        lasthng = 0;
+      } else if (positionCurrent.hng <= 45 && positionCurrent.hng > 15) {
+        lasthng = 30;
+      } else if (positionCurrent.hng <= 75 && positionCurrent.hng > 45) {
+        lasthng = 60;
+      } else if (positionCurrent.hng <= 105 && positionCurrent.hng > 75) {
+        lasthng = 90;
+      } else if (positionCurrent.hng <= 135 && positionCurrent.hng > 105) {
+        lasthng = 120;
+      } else if (positionCurrent.hng <= 165 && positionCurrent.hng > 135) {
+        lasthng = 150;
+      } else if (positionCurrent.hng <= 195 && positionCurrent.hng > 165) {
+        lasthng = 180;
+      } else if (positionCurrent.hng <= 225 && positionCurrent.hng > 195) {
+        lasthng = 210;
+      } else if (positionCurrent.hng <= 255 && positionCurrent.hng > 225) {
+        lasthng = 240;
+      } else if (positionCurrent.hng <= 285 && positionCurrent.hng > 255) {
+        lasthng = 270;
+      } else if (positionCurrent.hng <= 315 && positionCurrent.hng > 285) {
+        lasthng = 300;
+      } else {
+        lasthng = 330;
+      }
+    //针对ipad进行航向角修正
+    rotateangle=lasthng+90;
+    image.setRotation(rotateangle);
+    console.log("rotateangle:"+rotateangle);
+  }
