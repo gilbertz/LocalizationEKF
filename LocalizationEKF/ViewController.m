@@ -20,7 +20,7 @@
 
 #define LOG_LEVEL_DEF      DDLogLevelAll
 
-static NSString * const kUUID = @"B9407F30-F5F8-466E-AFF9-25556B57FE6D";
+static NSString * const kUUID = @"23A01AF0-232A-4518-9C0E-323FB773F5EF";
 static NSString * const kIdentifier = @"SomeIdentifier";
 
 #define kUpdateFrequency    60.0
@@ -393,7 +393,7 @@ static double timeInterval = 1.0/kUpdateFrequency;
         c3beacon.aveRssi = [NSNumber numberWithDouble:0.0];
         c3beacon.distance = [NSNumber numberWithDouble:0.0];
         c3beacon.effcount = [NSNumber numberWithInt:0];
-        c3beacon.measuredPower = [NSNumber numberWithInt:-59];
+        c3beacon.measuredPower = [NSNumber numberWithInt:59];
         c3beacon.rssiChain = [[NSMutableArray alloc] init];
         
         [self.beaconList addObject:c3beacon];
@@ -414,9 +414,9 @@ static double timeInterval = 1.0/kUpdateFrequency;
         [dictArr addObject:dict];
     }
     
-//    NSData *jsonData  =[self toJSONData: dictArr];
-//    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-//    NSLog(@"%@",jsonString);
+    NSData *jsonData  =[self toJSONData: dictArr];
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    NSLog(@"%@",jsonString);
 //    NSLog(@"接收到的所有ibeacon的个数：%ld",dictArr.count);
     
     //向ibeaconList地图的每个ibeacon对象存入信号强度数组，数组元素最多为5个，数组作为一个链表，是动态更新的，保持最大为5个，没人检测到的ibeaconList中的ibeacon对象存入信号强度0
@@ -425,7 +425,7 @@ static double timeInterval = 1.0/kUpdateFrequency;
         C3Beacon *c3beacon = [[C3Beacon alloc] init];
         c3beacon = self.beaconList[i];
         if (c3beacon.rssiChain.count == 5) {
-            [c3beacon.rssiChain removeLastObject];
+            [c3beacon.rssiChain removeObjectAtIndex:0];
         }
         int j;
         
@@ -462,7 +462,7 @@ static double timeInterval = 1.0/kUpdateFrequency;
         tmpY = tmpY / tmpD;
         beacon_lat = tmpX;
         beacon_lon = tmpY;
-//        NSLog(@"当前位置,beacon_lat:%f;beacon_lon:%f",beacon_lat,beacon_lon);
+        NSLog(@"当前位置,beacon_lat:%f;beacon_lon:%f",beacon_lat,beacon_lon);
         
     }
     NSArray* beaconLatAndLon = @[[NSNumber numberWithDouble:beacon_lat],[NSNumber numberWithDouble:beacon_lon]];

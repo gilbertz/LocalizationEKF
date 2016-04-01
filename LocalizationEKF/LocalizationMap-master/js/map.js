@@ -78,8 +78,8 @@ var beaconpoint_style = new ol.style.Style({
 beaconpoint.setStyle(beaconpoint_style);
 
 var current_poi_array = [];
-current_poi_array[0] = 121.4366617310828;
-current_poi_array[1] = 31.02737409901093;
+current_poi_array[0] = 121.415633;
+current_poi_array[1] = 31.029636;
 var current_poi = ol.proj.fromLonLat(current_poi_array);
 
 /*！！！！！！！！！！！！当前位置current_poi_marker实时显示的Ajax设置初始！定义的结束位置，函数在下面！！！！！！！！！！！！*/
@@ -188,61 +188,7 @@ function show(jsondata){
     current_poi = ol.proj.fromLonLat(current_poi_array);
     (current_poi_marker.getGeometry()).setCoordinates(current_poi);
     current_poi_marker.setStyle(current_poi_marker_style);
-    // image.setRotation(jsondata.heading);
+    image.setRotation((jsondata.heading+90)*3.1415/180);
     map.render();
     draw();
 };
-
-  if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", onHeadingChange);
-  }
-
-  function getBrowserOrientation() {
-    var orientation;
-    if (screen.orientation && screen.orientation.type) {
-      orientation = screen.orientation.type;
-    } else {
-      orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
-    }
-    return orientation;
-  }
-
-  function onHeadingChange(event) {
-    var heading = event.alpha;
-
-    if (typeof event.webkitCompassHeading !== "undefined") {
-      heading = event.webkitCompassHeading; 
-    };
-
-    positionCurrent.hng = heading;
-
-      if (positionCurrent.hng <= 15 || positionCurrent.hng > 345) {
-        lasthng = 0;
-      } else if (positionCurrent.hng <= 45 && positionCurrent.hng > 15) {
-        lasthng = 30;
-      } else if (positionCurrent.hng <= 75 && positionCurrent.hng > 45) {
-        lasthng = 60;
-      } else if (positionCurrent.hng <= 105 && positionCurrent.hng > 75) {
-        lasthng = 90;
-      } else if (positionCurrent.hng <= 135 && positionCurrent.hng > 105) {
-        lasthng = 120;
-      } else if (positionCurrent.hng <= 165 && positionCurrent.hng > 135) {
-        lasthng = 150;
-      } else if (positionCurrent.hng <= 195 && positionCurrent.hng > 165) {
-        lasthng = 180;
-      } else if (positionCurrent.hng <= 225 && positionCurrent.hng > 195) {
-        lasthng = 210;
-      } else if (positionCurrent.hng <= 255 && positionCurrent.hng > 225) {
-        lasthng = 240;
-      } else if (positionCurrent.hng <= 285 && positionCurrent.hng > 255) {
-        lasthng = 270;
-      } else if (positionCurrent.hng <= 315 && positionCurrent.hng > 285) {
-        lasthng = 300;
-      } else {
-        lasthng = 330;
-      }
-    //针对ipad进行航向角修正
-    rotateangle=lasthng+90;
-    image.setRotation(rotateangle);
-    console.log("rotateangle:"+rotateangle);
-  }
