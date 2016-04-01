@@ -224,6 +224,8 @@ static double timeInterval = 1.0/kUpdateFrequency;
     
     if (filteredBeacons.count == 0) {
         NSLog(@"No beacons found nearby.");
+        beacon_lat = 0.0;
+        beacon_lon = 0.0;
     } else {
         NSLog(@"Found %lu %@.", (unsigned long)[filteredBeacons count],
               [filteredBeacons count] > 1 ? @"beacons" : @"beacon");
